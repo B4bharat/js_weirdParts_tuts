@@ -1,4 +1,5 @@
 /*
+ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation
  We can access object's properties in two ways
  - dot notation
  - Bracket notation
