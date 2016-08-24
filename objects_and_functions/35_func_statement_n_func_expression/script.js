@@ -24,3 +24,23 @@ During the 'execution phase', they are therefore available and that's why we can
 function defender() {
 	console.log('defend your area');
 }
+
+/*
+	Function expression Example
+*/
+
+//expDefender(); //Undefined is not a function
+
+var expDefender = function() {
+	console.log('defend your area');
+};
+/*
+Expression becuase the anonymous function returns a function object [with properties
+- Name: anonymous
+- Code: console.log('defend your area');
+which is saved in the variable 'expDefender'.
+
+Since 'expDefender' is a variable, when the 'execution context' is created, during the 'creation phase' it's value is set to special primitive called 'undefined' and when the code is run line by line during the 'execution phase' and when it reaches line #32, it encounters 'expDefender' value as 'undefined' and hence it throws an error 'undefined is not a function'
+]
+*/
+expDefender(); //'defend your area'
