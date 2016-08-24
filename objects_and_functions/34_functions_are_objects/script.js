@@ -21,14 +21,31 @@ console.log(square(12));
 function multiply(a, b) {
   return function() {
     return a*b;
-  }
+  };
 }
 var result = multiply(3, 5)();
 console.log(result);
 
 /*
+Another example of a function returning a function, a closure accessing the arguments 'firstName' and 'lastName'
+*/
+function fullName(firstName, lastName) {
+  return function() {
+    return firstName + ' ' + lastName;
+  };
+}
+var personName = fullName('Bharat', 'Poptwani');
+console.log(personName());
+
+/*
   To make functions more powerful, in javascript functions are objects. That means one can add properties to it.
-  It contains two built in properties
-  - Name
+  It contains two built-in properties
+  - Name [can be anonymous when no name is specified to a function]
   - Code [which is invocable using '()' paranthesis]
 */
+function midfielder() {
+  console.log('pass the ball around');
+}
+midfielder.position = 'Center Circle';
+console.log(midfielder); //will print the function statement
+console.log(midfielder.position); //'Center Cirle'
