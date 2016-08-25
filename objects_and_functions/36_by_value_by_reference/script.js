@@ -20,3 +20,16 @@ object1.greeting = 'hello'; //since both 'object1' and 'object2' are pointing to
 console.log(object1);// { 'greeting': 'hello' }
 console.log(object2); // { 'greeting': 'hello' }
 
+//by reference (even as parameters)
+function changeGreeting(obj) {
+	obj.greeting = 'Hola';
+}
+
+changeGreeting(object2);
+console.log(object1); //'Hola'
+console.log(object1); //'Hola'
+
+// equals operator sets up new memory space (new address)
+object1 = { 'greeting': 'howdy' };
+console.log(object1); // 'howdy'
+console.log(object2); // 'Hola'
