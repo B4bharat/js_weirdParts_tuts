@@ -21,3 +21,21 @@ clubInfo('Arsenal'); // will log 'Arsenal', undefined, undefined
 clubInfo('Chelsea', 1); //will log 'Chelsea', 1, undefined
 clubInfo('Arsenal', 5, 1886); //will log 'Arsenal', 5, 1886
 
+(function(a) {
+	console.log(arguments[0] === a); //true
+	console.log(a);
+
+	//modify argument property
+	arguments[0] = 10;
+	console.log(a); //10
+
+	//modify named paramter variable
+	a = 20;
+	console.log(arguments[0]); //20
+
+})(1, 2);
+/*
+	The above example shows how every argument is tightly coupled with their corresponding named parameter
+	If you change the value of a named paramter, the value of the corresponding index's argument also changes and vice-versa
+*/
+
