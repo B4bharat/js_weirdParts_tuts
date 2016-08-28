@@ -2,6 +2,13 @@ function clubInfo(name, currentStanding, foundationYear) {
 	console.log(name);
 	console.log(currentStanding);
 	console.log(foundationYear);
+	console.log(arguments);
+	/*
+		'arguments' object is a special keyword just like 'this' which javascript's engine sets up for us during the 'Creation Phase' of the 'Execution Context'
+		'arguments' is an 'array-like' structure which contains all the values passed to the paramters of a function
+		'array-like' because it doesn't have all the methods of a javascript array associated with it
+		The arguments object has an array-like structure with an indexed property for each passed argument and a length property equal to the total number of parameters supplied by the caller
+	*/
 	console.log('--------------');
 }
 clubInfo(); // will log undefined, undefined, undefined
