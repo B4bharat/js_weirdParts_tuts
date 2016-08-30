@@ -20,8 +20,8 @@ function passCompletionPercentage(totalPasses, completedPasses) {
 }
 
 function avgPasses(totalPasses, completedPasses) {
-	var avgPasses = passingStats(totalPasses, completedPasses, 'avgPasses');
-	console.log(avgPasses);
+	var averagePasses = passingStats(totalPasses, completedPasses, 'avgPasses');
+	console.log(averagePasses);
 }
 
 passCompletionPercentage(120, 90);
