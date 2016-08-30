@@ -27,3 +27,38 @@ console.log(passComplPercentageIIFE);
 	Since the function expression was immedietly invoked after it's definition, its called Immedietly invoked function expression [IIFE]
 */
 
+//One can just simply write javascript expressions, it doesn't necessarily needs to be stored in a variable. see examples below
+3; // A Number expression
+"I am a string expression"; // A String expression
+{
+	name: 'Bharat Poptwani'
+}; //An Object Literal
+
+//What about function?
+//The code below will throw an error - Unexpected token - (
+/*function(totalPasses, complPasses) {
+	console.log(complPasses/totalPasses*100);
+}*/
+/*
+	This is because as soon as the javascript's syntax parser seens the keyword 'function', it expects that a name for it to be written for it to qualify as a statement like so:
+	function passCompletionPercentage(totalPasses, complPasses) {
+		console.log('pass completion stat');
+	}
+ */
+
+/*
+	So we trick the syntax parser by writing a bracket operator around the function expression.
+	So the syntax parser thinks that the expression inside the bracket operator needs to be evaluated.
+	Remember only expressions can be added inside a bracket operator
+*/
+(function(name) {
+	console.log(name);
+});
+
+/*
+	Since function expression can be added inside bracket operator which returns a function object, as we know it about the function object, it can be invoked using paranthesis, so let's do it
+*/
+(function passComplPercentageIIFE2(complPasses, totalPasses) {
+	console.log('classic IIFE example');
+	console.log(complPasses/totalPasses*100);
+}(93, 100));
