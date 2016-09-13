@@ -52,4 +52,16 @@ logName.apply(person, ['es', 'es']);
 - 'Apply' method is exactly like call i.e. it immediately invokes the function it is attached to, but the only difference is that it takes the values of the arguments that needs to be passed to the function as an 'Array'
 */
 
+/*
+Trick the syntax parser by making it realise that its not a normal function statement, its a function expression by adding a 'grouping' operator around
+*/
+(function(lang1, lang2) {
+
+  console.log('Logged: ' + this.getFullName());
+  console.log('Arguments: ' + lang1 + ' ' + lang2);
+  console.log('---------------------------------');
+
+}).apply(person, ['en', 'es']);
+
+
 
