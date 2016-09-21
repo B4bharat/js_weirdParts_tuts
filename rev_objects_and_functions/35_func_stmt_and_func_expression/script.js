@@ -24,3 +24,16 @@ var anonymousGreet = function() {
 	Function invocation statement below
 */
 anonymousGreet();
+
+/*
+Functions are a first class citizen in javascript so we can do with it whatever we can do with a normal variable i.e. we can assign it to a variable, create it on the fly as in line #37 and as the example below pass it as the arguments for another function.
+This sets up interesting avenues such as functional programming.
+*/
+function log(a) {
+	//variable 'a' points to the spot in memory where the anonymous function on line #37 was created and thus as with function objects, its code property can be invoked using the paranthesis
+	a();
+}
+
+log(function() {
+	console.log('functions are first class citizens in javascript ho hooy!');
+});
