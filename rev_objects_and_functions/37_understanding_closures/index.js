@@ -23,7 +23,7 @@ fs[2]();
     contains variable fs
     When 'buildFunctions' is called, 'buildFunctions' execution context gets created
   - buildFunctions' Execution context
-    contains a variable arr
+    contains a variable 'arr'
     line #4 creates variable i with initial value set to 0
     line #5 keeps pushing anonymous functions into the array but NEVER executes it
     When i reaches has value = 3, the for loop is broken because the conditional statement says 'i < 3'
