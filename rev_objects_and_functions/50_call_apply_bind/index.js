@@ -7,9 +7,15 @@ var person = {
 };
 
  var logName = function(lang1, lang2) {
+ 	console.log('Arguments '+ lang1 + ' ' + lang2);
  	this.fullName();
+ 	console.log('----------------------');
  };
 
- var logFullName = logName.bind(person);
+ var logFullName = logName.bind(person, 'sindhi', 'gujrati');
 
  logFullName();
+
+ logName.call(person, 'sindhi', 'gujrati');
+ logName.apply(person, ['sindhi', 'marathi']);
+
