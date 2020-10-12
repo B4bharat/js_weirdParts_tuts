@@ -8,7 +8,7 @@ var willIGetNewPhone = new Promise(function (resolve, reject) {
     };
     resolve(phone);
   } else {
-    var reason = new Error('Mom is not happy');
+    var reason = new Error('mom is not happy');
     reject(reason);
   }
 });
